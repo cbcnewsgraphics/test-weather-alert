@@ -1,0 +1,6 @@
+
+datawrappergraphics==0.3.34
+geojson==2.5.0
+geopandas==0.12.2
+ipython==7.34.0
+requests==2.28.1
