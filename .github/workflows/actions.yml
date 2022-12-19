@@ -22,8 +22,6 @@ jobs:
 
       - name: execute py script
         uses: actions/setup-python@v4
-        with:
-          DW_AUTH_TOKEN: ${{ secrets.DW_AUTH_TOKEN }}
         env:
           DW_AUTH_TOKEN: ${{ secrets.DW_AUTH_TOKEN }}
         run: |
