@@ -21,7 +21,6 @@ jobs:
           pip install -r requirements.txt
 
       - name: execute py script
-        uses: actions/setup-python@v4
         env:
           DW_AUTH_TOKEN: ${{ secrets.DW_AUTH_TOKEN }}
         run: python3 test-weather-alert.py
