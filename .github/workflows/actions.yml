@@ -7,9 +7,10 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v3 # checkout the repository content to github runner
-        with:
-          persist-credentials: false
-          fetch-depth: 0
+        
+      - name: test step
+      - uses: actions/checkout@v2
+      - run: ./test-weather-alert.py
 
       - name: setup python
         uses: actions/setup-python@v4
