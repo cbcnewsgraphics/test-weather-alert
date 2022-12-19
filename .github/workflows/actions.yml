@@ -2,25 +2,24 @@ name: Test action
 on: [push]
 
 jobs:
-  update_maps:
+  build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v3
-        with:
-          persist-credentials: false
-          fetch-depth: 0
+
+      - name: checkout repo content
+        uses: actions/checkout@v3 # checkout the repository content to github runner
 
       - name: setup python
         uses: actions/setup-python@v4
         with:
-          python-version: '3.10.9'
+          python-version: '3.10.9' # install the python version needed
 
-      - name: Install dependencies
+      - name: install python packages
         run: |
           pip install -r requirements.txt
-      - name: Update Canada heat warnings map
-        env: 
-            DW_AUTH_TOKEN: ${{ secrets.DW_AUTH_TOKEN }}
+
+      - name: execute py script # run test-weather-alert.py
+        env:
+          DW_AUTH_TOKEN: ${{ secrets.DW_AUTH_TOKEN }}
         run: |
           python3 test-weather-alert.py
