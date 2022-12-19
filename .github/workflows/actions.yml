@@ -7,7 +7,7 @@ jobs:
     steps:
 
       - name: checkout repo content
-        uses: actions/checkout@v2 # checkout the repository content to github runner
+        uses: actions/checkout@v3 # checkout the repository content to github runner
 
       - name: setup python
         uses: actions/setup-python@v4
@@ -22,4 +22,4 @@ jobs:
         env:
           DW_AUTH_TOKEN: ${{ secrets.DW_AUTH_TOKEN }}
         run: |
-          python3 https://github.com/cbcnewsgraphics/test-weather-alert/blob/main/weather_alert.py
+          python3 test-weather-alert.py
