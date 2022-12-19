@@ -21,6 +21,8 @@ jobs:
           pip install -r requirements.txt
 
       - name: execute py script
+        with:
+          DW_AUTH_TOKEN: ${{ secrets.DW_AUTH_TOKEN }} 
         env:
           DW_AUTH_TOKEN: ${{ secrets.DW_AUTH_TOKEN }}
         run: |
