@@ -21,4 +21,5 @@ jobs:
       - name: execute py script # run test-weather-alert.py
         env:
           DW_AUTH_TOKEN: ${{ secrets.DW_AUTH_TOKEN }}
-        run: python test-weather-alert.py
+        run: |
+          python test-weather-alert.py
