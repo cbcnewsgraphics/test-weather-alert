@@ -1,4 +1,4 @@
-name: update test-weather-alert.py
+name: Test action
 on: [push]
 
 jobs:
