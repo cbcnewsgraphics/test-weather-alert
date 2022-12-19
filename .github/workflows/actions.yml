@@ -8,6 +8,9 @@ jobs:
 
       - name: Checkout code
         uses: actions/checkout@v3 # checkout the repository content to github runner
+        with:
+          persist-credentials: false
+          fetch-depth: 0
 
       - name: setup python
         uses: actions/setup-python@v4
