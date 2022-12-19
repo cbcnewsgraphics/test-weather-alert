@@ -2,7 +2,11 @@ name: update test-weather-alert.py
 
 on:
   push:
-    branches: [graeme_action_test]
+    branches:
+    - graeme_action_test
+  pull_request:
+    branches:
+    - main
 
 
 jobs:
