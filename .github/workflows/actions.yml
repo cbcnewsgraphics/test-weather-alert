@@ -1,8 +1,5 @@
 name: update test-weather-alert.py
 
-on:
-  push:
-    branches: [main]
 
 
 jobs:
